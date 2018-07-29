@@ -27,7 +27,7 @@
 
 <div class="container" style="text-align:center;margin-top:140px">
   <h3>Oops!! This is not the page you're looking for</h3>
-  <h4>It's been more then 5 seconds, why are you still here?</h4>  
+  <h4>Please leave, now</h4>  
 </div>
 
 <script type="text/javascript">
