@@ -15,6 +15,12 @@ A web application to shorten your large url
 * Mysql
 * Jboss 
 
+### Technologies used
+
+* Java => Resteasy, JDBC, Websocket
+* Javascript, jsp, bootstrap 
+
+
 ### Installing
 
 Clone your repository from github
