@@ -40,7 +40,7 @@ CREATE TABLE `shortened_url` (
 
 LOCK TABLES `shortened_url` WRITE;
 /*!40000 ALTER TABLE `shortened_url` DISABLE KEYS */;
-INSERT INTO `shortened_url` VALUES (1,'http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/HomeWebsocket/WebsocketHome.html','http://localhost:8080/UrlShortening/cc/url/1532538376020','2018-08-25 22:06:16','2018-08-06'),(2,'https://docs.oracle.com/javaee/6/tutorial/doc/bnafu.html','http://localhost:8080/UrlShortening/cc/url/1532538754009','2018-07-25 22:12:34','2018-08-27'),(3,'https://docs.oracle.com/cd/E19776-01/820-4867/ghrpv/index.html','http://localhost:8080/UrlShortening/cc/url/1532782601584','2018-07-25 22:16:35','2018-08-27'),(4,'https://www.facebook.com/groups/Javagroup123/','http://localhost:8080/UrlShortening/cc/url/1532630671857','2018-07-26 23:44:32','2018-09-06');
+INSERT INTO `shortened_url` VALUES (1,'http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/HomeWebsocket/WebsocketHome.html','http://localhost:8080/UrlShortening/cc/url/1532538376020','2018-08-25 22:06:16','2018-08-06'),(2,'https://dannguyen.github.io/github-for-portfolios/lessons/clone-github-pages-repo/','http://localhost:8080/UrlShortening/cc/url/1532538754009','2018-07-25 22:12:34','2018-08-27'),(3,'https://ux.stackexchange.com/questions/55410/do-long-domain-names-really-affect-user-experience','http://localhost:8080/UrlShortening/cc/url/1532782601584','2018-07-25 22:16:35','2018-08-27'),(4,'https://www.benchmarkemail.com/help-FAQ/answer/what-websites-will-help-shorten-my-long-urls','http://localhost:8080/UrlShortening/cc/url/1532630671857','2018-07-26 23:44:32','2018-09-06');
 /*!40000 ALTER TABLE `shortened_url` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -85,4 +85,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-29 16:21:22
+-- Dump completed on 2018-07-29 16:46:36
