@@ -27,6 +27,15 @@ Setup your jboss server and add project to server
 
 Run the server and go to 'http://localhost:8080/UrlShortening'. Enjoy!
 
+![1](https://user-images.githubusercontent.com/26091655/43366083-bcaaa26e-9350-11e8-8f8f-188671db6487.png)
+Enter your long URL 
+
+![2](https://user-images.githubusercontent.com/26091655/43366084-bcde2b52-9350-11e8-9049-e075c91410e9.png)
+Press the button and Wollaa!!, copy the link and enjoy.
+
+![4](https://user-images.githubusercontent.com/26091655/43366085-bd0e7848-9350-11e8-8509-096b83eea537.png)
+You can also see analytics for your url
+
 ## Built With
 
 * [Resteasy](http://www.dropwizard.io/1.0.2/docs/) - The Api framework used
