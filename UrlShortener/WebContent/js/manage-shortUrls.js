@@ -133,7 +133,7 @@ function initChart(){
 					}
 				};
 
-				var chart = new Chart(ctx, cfg);
+				chart = new Chart(ctx, cfg);
 
 }
 
@@ -153,10 +153,45 @@ function isBigUrl(url){
 }
 
 
+function initWebsocket(){
+	websocket = new WebSocket("ws://localhost:8080/UrlShortening/chartSocket");
+	websocket.onopen = function(message){
+		processOpen(message);
+	}
+	
+	websocket.onmessage = function(message){
+		processMessage(message.data);
+	}
+	
+	websocket.onclose = function(message){
+		processClose(message);
+	}
+	
+	websocket.onerror = function(message){
+		processError(message);
+	}
+	
+//	websocket.send(urlClicks[0].shortenedUrlId);
+}
 
+function processOpen(message){
+//	alert("Server Connected");
+//	websocket.send("Connected sir from lcient");
+}
 
+function processMessage(message){
+	urlClicks = JSON.parse(message);
+	initChart();
+//	alert("Server message "+message);	
+}
 
+function processClose(message){
+//	alert("Server disConnected");
+}
 
+function processError(message){
+//	alert("Server error");
+}
 
 
 

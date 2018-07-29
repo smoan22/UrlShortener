@@ -41,8 +41,9 @@
 
 <!--Main Navigation-->
 
-<div class="container">  
-  <id="urlForm">
+
+<div class="container" style="margin-top:50px">  
+  <form>
   <div class="md-form form-sm">
   	<h2>Simplify your Links</h2>
     <input type="text" id="url" name="url" placeholder="Enter URL" class="form-control form-control-sm" style="margin-bottom: 0px">

@@ -30,6 +30,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
 	
 <script type="text/javascript">		
+		var websocket;
+		var chart; 
 		var urlClicks=new Array();
 		var table;
 		<%
@@ -58,6 +60,15 @@
 <!--Main Navigation-->
 
    <canvas id="myChart"></canvas>
+	<script type="text/javascript">
+
+		$( document ).ready(function() {	
+			initChart();	
+			initWebsocket();				
+		});
+	
+		</script>
+
 		
 </body>
 </html>

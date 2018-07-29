@@ -18,6 +18,7 @@ import javax.ws.rs.core.UriInfo;
 import org.apache.commons.validator.routines.UrlValidator;
 import org.jboss.resteasy.plugins.providers.html.View;
 
+import com.codeclobber.urlshortner.websocket.*;
 import com.codeclobber.urlshortner.database.DBOperations;
 import com.codeclobber.urlshortner.models.Response;
 import com.codeclobber.urlshortner.models.ShortenedUrl;
@@ -55,7 +56,7 @@ public class UrlShortnerService {
 					try {
 						String shortUrl = DBOperations.insertShortenedUrl(uriInfo, shortenedUrl);						
 						response.setStatus("200");
-						response.setData(shortUrl);
+						response.setData("Copy this: "+shortUrl);
 					} catch (Exception e1) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -86,10 +87,11 @@ public class UrlShortnerService {
 	@Path("/url/{shortUrl}")	
 	public void redirectToOrignalUrl(@Context HttpServletResponse resp,@Context HttpServletRequest req, @PathParam("shortUrl") String shortUrl) throws Exception {
 		String requestUri = uriInfo.getRequestUri().toString();
-		requestUri = requestUri.substring(0, requestUri.lastIndexOf("/") + 1) + shortUrl;		
+		requestUri = requestUri.substring(0, requestUri.lastIndexOf("/") + 1) + shortUrl;
+		ShortenedUrl shortenedUrl = null;
 		String url = "";
     	try {    		
-    		ShortenedUrl shortenedUrl = DBOperations.getShortenedUrlByUrl(requestUri);
+    		shortenedUrl = DBOperations.getShortenedUrlByUrl(requestUri);
     		shortenedUrl = DBOperations.getShortenedUrlByUrl(requestUri);
     		Date expiryDate = DateUtil.getDateWithoutTime(shortenedUrl.getExpiryDate());
 			Date today = DateUtil.getDateWithoutTime(new Date());
@@ -104,7 +106,12 @@ public class UrlShortnerService {
 			url = "http://localhost:8080/UrlShortening/error.jsp";			
 		}
     	
-    	resp.sendRedirect(url);	
+    	resp.sendRedirect(url);
+    	try{
+    		ServerEndpoint.handleMessage(shortenedUrl.getId());	
+    	}catch(Exception e){
+    		e.printStackTrace();
+    	}    	
     }
 
 	@GET
