@@ -30,11 +30,6 @@
   <h4>Please leave, now</h4>  
 </div>
 
-<script type="text/javascript">
-$( document ).ready(function() {	
-	$("")					
-});
-</script>
 
 </body>
 </html>
