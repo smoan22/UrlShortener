@@ -1,0 +1,12 @@
+
+
+#shortUrls th { font-size: 11px; }
+#shortUrls td { font-size: 11px; }
+
+#shortUrls tbody > tr > td {
+    vertical-align: middle;
+}
+
+#shortUrls .buttonColumn{
+	text-align: center;
+}
